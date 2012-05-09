@@ -17,7 +17,7 @@ client.on('messageReceived', function(msg, room) {
     console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);
 });
 
-client.connect(function(info) {
+client.connect("username", "password", function(task) {
     console.log("You are now logged in");
 
     client.joinRoom("SomeTestRoom", function() {

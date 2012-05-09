@@ -1,0 +1,25 @@
+{
+    "name": "jabbrnode",
+    "version": "0.1.0",
+    "description": "Jabbr client for Node.js",
+    "keywords": ["jabbr"],
+    "author": "Scott Moak <scott.moak@mybrainoncode.com>",
+    "directories": {
+        "lib": "./lib"
+    },
+    "main": "./lib/jabbrnode",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/aslakhellesoy/eventsource-node/raw/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "request": "latest",
+        "eventsource": "0.0.5",
+        "Deferred": "0.1.1"
+    },
+    "engines": {
+        "node": ">=0.6.0"
+    }
+}

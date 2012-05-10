@@ -24,6 +24,9 @@ client.connect("username", "password", function(task) {
 
         console.log("You have joined SomeTestRoom");        
 
+        // speak robot speak!
+        client.say("Hey everyone!", "SomeTestRoom");
+
         client.getRoomInfo("SomeTestRoom", function(roomInfo) {
             console.log("Users");
             for (var key in roomInfo.Users) {
@@ -33,6 +36,11 @@ client.connect("username", "password", function(task) {
         });
 
     });
+
+    // logoff after 10 seconds
+    setTimeout(function() {
+        client.disconnect();
+    }, 10000);
 
 });
 ```

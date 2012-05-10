@@ -1,8 +1,8 @@
 {
-    "name": "jabbrnode",
+    "name": "njabbr",
     "version": "0.1.0",
     "description": "Jabbr client for Node.js",
-    "keywords": ["jabbr"],
+    "keywords": ["jabbr", "signalr"],
     "author": "Scott Moak <scott.moak@mybrainoncode.com>",
     "directories": {
         "lib": "./lib"
@@ -11,7 +11,7 @@
         "type": "git",
         "url": "https://smoak@github.com/smoak/njabbr.git"
     },
-    "main": "./lib/jabbrnode",
+    "main": "./lib/jabbrclient",
     "licenses": [
         {
             "type": "MIT",

@@ -1,17 +1,17 @@
-# JabbrNode
+# njabbr
 
 A nodejs [Jabbr](https://github.com/davidfowl/JabbR) client
 
 ## Install
 
-TODO
+    npm install njabbr
 
 ## Usage
 
 ```javascript
-var jabbrClient = require('jabbrnode').JabbrNode;
+var JabbrClient = require('njabbr').JabbrClient;
 
-var client = new jabbrClient("http://jabbr-staging.apphb.com/");
+var client = new JabbrClient("http://jabbr-staging.apphb.com/");
 
 client.on('messageReceived', function(msg, room) {
     console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);

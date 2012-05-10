@@ -1,5 +1,5 @@
-var jnode = require('../lib/jabbrnode').JabbrNode;
-var jclient = new jnode("http://jabbr-bots.apphb.com/");
+var JabbrClient = require('../lib/jabbrclient').JabbrClient;
+var jclient = new JabbrClient("http://jabbr-bots.apphb.com/");
 
 jclient.on('messageReceived', function(msg, room) {
     console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);

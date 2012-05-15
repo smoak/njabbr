@@ -13,11 +13,11 @@ jclient.connect("njabbr", "testing", function(task) {
 
     jclient.joinRoom("Hubot", function() {
         console.log("Joined room!");
-/*        setTimeout(function() {
-            jclient.say("See ya!", "TheTestRoom");
+        setTimeout(function() {
+            jclient.say("See ya!", "Hubot");
 
             setTimeout(function() {
-                jclient.leaveRoom("TheTestRoom", function() {
+                jclient.leaveRoom("Hubot", function() {
                     jclient.disconnect();                
                 });
             }, 5000);

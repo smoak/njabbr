@@ -1,5 +1,5 @@
 var JabbrClient = require('../lib/jabbrclient').JabbrClient;
-var jclient = new JabbrClient("http://jabbr-bots.apphb.com/");
+var jclient = new JabbrClient("http://jabbr.net/");
 
 jclient.on('messageReceived', function(msg, room) {
     console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);
@@ -11,9 +11,9 @@ jclient.connect("njabbr", "testing", function(task) {
     jclient.setNote("Test");
     jclient.setFlag("US");
 
-    jclient.joinRoom("TheTestRoom", function() {
+    jclient.joinRoom("Hubot", function() {
         console.log("Joined room!");
-        setTimeout(function() {
+/*        setTimeout(function() {
             jclient.say("See ya!", "TheTestRoom");
 
             setTimeout(function() {

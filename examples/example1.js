@@ -8,7 +8,9 @@ jclient.on('messageReceived', function(msg, room) {
 
 jclient.connect("njabbr", "testing", function(task) {
     console.log("Logged on successfully");
-    console.log(util.inspect(task));
+    jclient.joinRoom("Hubot", function() {
+      console.log("Joined room!");
+    });
 /*    console.log("You are currently in the following rooms:");
     for (var i in task.Result.Rooms) {
         var room = task.Result.Rooms[i];

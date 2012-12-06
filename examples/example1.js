@@ -11,7 +11,7 @@ jclient.connect("njabbr", "testing", function(task) {
     jclient.joinRoom("Hubot", function() {
       console.log("Joined room!");
     });
-/*    console.log("You are currently in the following rooms:");
+    /*console.log("You are currently in the following rooms:");
     for (var i in task.Result.Rooms) {
         var room = task.Result.Rooms[i];
         console.log(room.Name);

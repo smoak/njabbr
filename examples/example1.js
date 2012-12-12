@@ -1,8 +1,9 @@
 var JabbrClient = require('../lib/jabbrclient').JabbrClient;
+var JabbrClientEvents = require('../lib/jabbrclient').JabbrClientEvents;
 var jclient = new JabbrClient("http://jabbr.net");
 var util = require('util');
 
-jclient.on('messageReceived', function(msg, room) {
+jclient.on(JabbrClientEvents.onMessageReceived, function(msg, room) {
     console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);
 });
 
@@ -10,7 +11,7 @@ jclient.connect("njabbr", "testing", function(task) {
     console.log("Logged on successfully");
     jclient.joinRoom("Hubot", function() {
       console.log("Joined room!");
-      setTimeout(function() {
+/*      setTimeout(function() {
         jclient.say("See ya!", "Hubot");
 
         setTimeout(function() {
@@ -19,7 +20,10 @@ jclient.connect("njabbr", "testing", function(task) {
           });
 
         }, 5000);
-      }, 2000);
+      }, 2000);*/
+    });
+    jclient.on(JabbrClient.onMessageReceived, function(message, room) {
+      console.log("Received message: " + message + " in room " + room);
     });
 
     jclient.setNote("Test");

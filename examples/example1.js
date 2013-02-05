@@ -1,6 +1,6 @@
 var JabbrClient = require('../lib/jabbrclient').JabbrClient;
 var JabbrClientEvents = require('../lib/jabbrclient').JabbrClientEvents;
-var jclient = new JabbrClient("http://jabbr.net");
+var jclient = new JabbrClient("https://jabbr.net");
 var util = require('util');
 
 jclient.on(JabbrClientEvents.onMessageReceived, function(msg, room) {

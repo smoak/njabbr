@@ -20,7 +20,7 @@
     ],
     "dependencies": {
         "request": "latest",
-        "eventsource": "0.0.5",
+        "eventsource": "latest",
         "Deferred": "0.1.1"
     },
     "engines": {

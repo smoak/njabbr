@@ -12,9 +12,6 @@ jclient.connect("njabbr", "testing", function(task) {
     jclient.joinRoom("Hubot", function() {
       console.log("Joined room!");
     });
-    jclient.on(JabbrClient.onMessageReceived, function(message, room) {
-      console.log("Received message: " + message + " in room " + room);
-    });
 
     jclient.setNote("Test");
     jclient.setFlag("US");

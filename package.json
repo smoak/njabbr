@@ -1,6 +1,6 @@
 {
     "name": "njabbr",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Jabbr client for Node.js",
     "keywords": ["jabbr", "signalr"],
     "author": "Scott Moak <scott.moak@mybrainoncode.com>",

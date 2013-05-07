@@ -4,7 +4,7 @@ var jclient = new JabbrClient("https://jabbr.net", { transport: "longPolling" })
 var util = require('util');
 
 jclient.on(JabbrClientEvents.onMessageReceived, function(msg, room) {
-    console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);
+  console.log("[" + msg.date + "] " + msg.name + ": " + msg.message);
 });
 
 jclient.connect("njabbr", "testing", function(task) {

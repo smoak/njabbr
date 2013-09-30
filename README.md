@@ -10,11 +10,11 @@ A nodejs [Jabbr](https://github.com/davidfowl/JabbR) client
 
 ```javascript
 var JabbrClient = require('njabbr').JabbrClient;
+var JabbrClientEvents = require('njabbr').JabbrClientEvents;
 
-var client = new JabbrClient("http://jabbr-staging.apphb.com/");
+var client = new JabbrClient("http://jabbr.url/");
 
-client.on('messageReceived', function(msg, room) {
-    console.log("[" + msg.When + "] " + msg.User.Name + ": " + msg.Content);
+client.on(JabbrClientEvents.onMessageReceived, function(msg, room) {
 });
 
 client.connect("username", "password", function(task) {
@@ -26,14 +26,6 @@ client.connect("username", "password", function(task) {
 
         // speak robot speak!
         client.say("Hey everyone!", "SomeTestRoom");
-
-        client.getRoomInfo("SomeTestRoom", function(roomInfo) {
-            console.log("Users");
-            for (var key in roomInfo.Users) {
-                var user = roomInfo.Users[key];
-                console.log(user.Name);
-            }
-        });
 
     });
 

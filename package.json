@@ -1,6 +1,6 @@
 {
     "name": "njabbr",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Jabbr client for Node.js",
     "keywords": ["jabbr", "signalr"],
     "author": "Scott Moak <scott.moak@mybrainoncode.com>",
@@ -19,7 +19,7 @@
         }
     ],
     "dependencies": {
-        "request": "2.27.0",
+        "request": "^2.55.0",
         "eventsource": "latest",
         "Deferred": "0.1.1",
         "moment": "latest"
